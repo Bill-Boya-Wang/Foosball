@@ -47,9 +47,9 @@ public class Game {
     //rip
     class Panel extends JPanel{
         public void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            g.drawImage(ball, 120,120,this);
-
+            //super.paintComponent(g);
+            g.drawImage(ball.getScaledInstance(50, 50, Image.SCALE_DEFAULT), 120,120,this);
+            System.out.println("WHAT IS GOING ON");
         }
     }
 
