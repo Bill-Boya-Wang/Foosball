@@ -1,12 +1,15 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class Game {
     JFrame frame;
     JPanel panel;
-
+    Image ball;
+    Toolkit t=Toolkit.getDefaultToolkit();
 
     JButton changeView, levelUp, levelDown;
 
@@ -14,6 +17,7 @@ public class Game {
         frame = new JFrame("map tester");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel = new Panel();
+        ball = t.getImage("Ball.png");
         panel.setPreferredSize(new Dimension(1000, 750));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         frame.setContentPane(panel);
@@ -44,6 +48,7 @@ public class Game {
     class Panel extends JPanel{
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
+            g.drawImage(ball, 120,120,this);
 
         }
     }
