@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 
 public class Game {
@@ -13,14 +14,16 @@ public class Game {
 
     JButton changeView, levelUp, levelDown;
 
-    public Game() {
+    public Game() throws IOException {
         frame = new JFrame("map tester");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel = new Panel();
         ball = t.getImage("Ball.png");
-        panel.setPreferredSize(new Dimension(1000, 750));
-        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        frame.setContentPane(panel);
+//        panel.setPreferredSize(new Dimension(1000, 750));
+//        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        frame.getContentPane().setPreferredSize(new Dimension(1200, 650));
+        frame.getContentPane().add(new JPanelWithBackground("GoodBoard.png"));
+
 
         levelDown = new JButton("Level Down");
         levelUp = new JButton("Level Up");
@@ -53,7 +56,7 @@ public class Game {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         new Game();
     }
 }
