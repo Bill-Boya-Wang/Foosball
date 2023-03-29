@@ -40,8 +40,8 @@ public class Game {
 
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            ball.drawBall(g, this);
             g.drawImage(backgroundImage,0,0,1200,650,0,0,101,60,this);
+            ball.drawBall(g, this);
             System.out.println("WHAT IS GOING ON");
             g.dispose();
         }
