@@ -22,7 +22,7 @@ public class Game {
     public Game() throws IOException {
         frame = new JFrame("map tester");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        panel = new Panel("GoodBoard.png");
+        panel = new Panel("FinalizedBoard.png");
         panel.setPreferredSize(new Dimension(1100, 650));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         frame.setContentPane(panel);
@@ -52,7 +52,7 @@ public class Game {
         private Image backgroundImage;
         Timer timer = new Timer(5, this);
         public Panel(String fileName) throws IOException {
-            backgroundImage = ImageIO.read(new File("GoodBoard.png"));
+            backgroundImage = ImageIO.read(new File("FinalizedBoard.png"));
         }
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
