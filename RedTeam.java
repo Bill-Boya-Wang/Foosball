@@ -26,10 +26,10 @@ public class RedTeam {
             movePlayer(2, 6);
             movePlayer(3, 6);
         }
-        g.drawImage(player, 500, rowPositions[0], 60, 65, IO);
-        g.drawImage(player, 500, rowPositions[1], 60, 65, IO);
-        g.drawImage(player, 500, rowPositions[2], 60, 65, IO);
-        g.drawImage(player, 500, rowPositions[3], 60, 65, IO);
+        g.drawImage(player, 500, rowPositions[0], 50, 53, IO);
+        g.drawImage(player, 500, rowPositions[1], 50, 53, IO);
+        g.drawImage(player, 500, rowPositions[2], 50, 53, IO);
+        g.drawImage(player, 500, rowPositions[3], 50, 53, IO);
     }
 
     public void movePlayer(int row, int pos) {
