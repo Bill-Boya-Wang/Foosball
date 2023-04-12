@@ -5,6 +5,7 @@ import java.awt.event.MouseListener;
 
 public class Clicker implements MouseListener, KeyListener {
     public static boolean w = false;
+    public static boolean s = false;
     public void mouseClicked(MouseEvent e) {
 
     }
@@ -28,12 +29,19 @@ public class Clicker implements MouseListener, KeyListener {
         if (key == 87) {
             w = true;
         }
+        if (key == 83) {
+            s = true;
+        }
     }
 
     public void keyReleased(KeyEvent e) {
         int key = e.getKeyCode();
         if (key == 87) {
             w = false;
+        }
+
+        if (key == 83) {
+            s = false;
         }
     }
 
