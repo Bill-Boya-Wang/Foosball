@@ -58,9 +58,6 @@ public class Game {
             super.paintComponent(g);
             g.drawImage(backgroundImage,0,0,1100,650,0,0,101,60,this);
             ball.drawBall(g, this);
-            if (Clicker.w) {
-                red.movePlayer(0, -6);
-            }
             red.paintTeam(g, this);
             System.out.println("WHAT IS GOING ON");
             g.dispose();
