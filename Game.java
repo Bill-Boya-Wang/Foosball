@@ -27,7 +27,7 @@ public class Game {
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         frame.setContentPane(panel);
         panel.setLayout(null);
-        ball = new Ball(t);
+        ball = new Ball(t, 200, 250);
         red = new RedTeam(t);
         frame.addKeyListener(new Clicker());
 //        frame.addKeyListener(new KeyAdapter() {
