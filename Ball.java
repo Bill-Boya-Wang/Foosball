@@ -3,35 +3,29 @@ import java.awt.*;
 import java.awt.image.ImageObserver;
 
 public class Ball {
-    private int rockWidth;
-    private int rockHeight;
-    private int xVelocity;
-    private int yVelocity;
-    private int xPos;
-    private int yPos;
+    private int velocity = 100;
+    private int x;
+    private int y;
     Image ball;
 
-    public Ball(Toolkit t, int x, int y) {
+    public Ball(Toolkit t) {
         ball = t.getImage("Ball.png");
-        xPos = x;
-        yPos = y;
-    }
-    public void setX(int x) {
-        xPos = x;
-    }
-    public void setY(int y) {
-        yPos = y;
-    }
-    public void ballYVelocity(){
-
-    }
-    public void ballXVelocity(){
-                 
+        x = 250;
+        y = 200;
     }
     public Image getBallImage () {
         return ball;
     }
+    public void ballYShift(){
+
+    }
+
     public void drawBall(Graphics g, ImageObserver IO) {
-        g.drawImage(ball, xPos, yPos, 50, 53, IO);
+        g.drawImage(ball, x, y, 45, 47, IO);
+    }
+
+    public void setPos(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 }
