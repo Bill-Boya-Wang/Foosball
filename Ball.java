@@ -21,7 +21,7 @@ public class Ball {
     }
 
     public void drawBall(Graphics g, ImageObserver IO) {
-        g.drawImage(ball, x, y, 50, 53, IO);
+        g.drawImage(ball, x, y, 45, 47, IO);
     }
 
     public void setPos(int x, int y) {
