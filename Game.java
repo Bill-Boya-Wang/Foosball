@@ -15,6 +15,7 @@ public class Game {
     JPanel panel;
     Ball ball;
     RedTeam red;
+    BlueTeam blue;
     Toolkit t=Toolkit.getDefaultToolkit();
 
 //    JButton changeView, levelUp, levelDown;
@@ -29,6 +30,7 @@ public class Game {
         panel.setLayout(null);
         ball = new Ball(t);
         red = new RedTeam(t);
+        blue = new BlueTeam(t);
         frame.addKeyListener(new Clicker());
 //        frame.addKeyListener(new KeyAdapter() {
 //            public void keyPressed(KeyEvent event) {
@@ -59,6 +61,7 @@ public class Game {
             g.drawImage(backgroundImage,0,0,1100,650,0,0,101,60,this);
             ball.drawBall(g, this);
             red.paintTeam(g, this);
+            blue.paintTeam(g, this);
             System.out.println("WHAT IS GOING ON");
             g.dispose();
             timer.start();
