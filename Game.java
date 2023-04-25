@@ -52,7 +52,7 @@ public class Game {
     //rip
     class Panel extends JPanel implements ActionListener{
         private Image backgroundImage;
-        Timer timer = new Timer(5, this);
+        Timer timer = new Timer(8, this);
         public Panel(String fileName) throws IOException {
             backgroundImage = ImageIO.read(new File("FinalizedBoard.png"));
         }
