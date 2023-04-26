@@ -32,17 +32,6 @@ public class Game {
         red = new RedTeam(t);
         blue = new BlueTeam(t);
         frame.addKeyListener(new Clicker());
-//        frame.addKeyListener(new KeyAdapter() {
-//            public void keyPressed(KeyEvent event) {
-//                int key = event.getKeyCode();
-//                if (key == 87) {
-//                    red.movePlayer(0, 3);
-//                }
-//            }
-//            public void keyReleased(KeyEvent event) {
-//
-//            }
-//        });
 
         frame.pack();
         frame.setVisible(true);
