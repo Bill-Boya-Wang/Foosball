@@ -31,17 +31,17 @@ public class RedTeam {
             movePlayer(2, 16);
         }
 
-        g.drawImage(player, 500, rowPos[0], 45, 47, IO);
-        g.drawImage(player, 500, rowPos[0] + 140, 45, 47, IO);
-        g.drawImage(player, 500, rowPos[0] + 280, 45, 47, IO);
-        g.drawImage(player, 500, rowPos[0] + 420, 45, 47, IO);
+        g.drawImage(player, 600, rowPos[0], 45, 47, IO);
+        g.drawImage(player, 600, rowPos[0] + 140, 45, 47, IO);
+        g.drawImage(player, 600, rowPos[0] + 280, 45, 47, IO);
+        g.drawImage(player, 600, rowPos[0] + 420, 45, 47, IO);
 
-        g.drawImage(player, 300, rowPos[1], 45, 47, IO);
-        g.drawImage(player, 300, rowPos[1] + 150, 45, 47, IO);
-        g.drawImage(player, 300, rowPos[1] + 300, 45, 47, IO);
+        g.drawImage(player, 320, rowPos[1], 45, 47, IO);
+        g.drawImage(player, 320, rowPos[1] + 150, 45, 47, IO);
+        g.drawImage(player, 320, rowPos[1] + 300, 45, 47, IO);
 
-        g.drawImage(player, 800, rowPos[2], 45, 47, IO);
-        g.drawImage(player, 800, rowPos[2] + 250, 45, 47, IO);
+        g.drawImage(player, 840, rowPos[2], 45, 47, IO);
+        g.drawImage(player, 840, rowPos[2] + 250, 45, 47, IO);
 
         g.drawImage(player, 980, rowPos[3], 45, 47, IO);
     }

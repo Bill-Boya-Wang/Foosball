@@ -9,7 +9,7 @@ public class Ball {
     private double direction;
     Image ball;
 
-    public Ball(Toolkit t) {
+    public Ball(Toolkit t)  {
         ball = t.getImage("Ball.png");
         x = 527;
         y = 600;

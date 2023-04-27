@@ -41,10 +41,10 @@ public class BlueTeam {
             this.movePlayer(2, 16);
         }
 
-        g.drawImage(this.player, 600, this.rowPos[0], 45, 47, IO);
-        g.drawImage(this.player, 600, this.rowPos[0] + 140, 45, 47, IO);
-        g.drawImage(this.player, 600, this.rowPos[0] + 280, 45, 47, IO);
-        g.drawImage(this.player, 600, this.rowPos[0] + 420, 45, 47, IO);
+        g.drawImage(this.player, 460, this.rowPos[0], 45, 47, IO);
+        g.drawImage(this.player, 460, this.rowPos[0] + 140, 45, 47, IO);
+        g.drawImage(this.player, 460, this.rowPos[0] + 280, 45, 47, IO);
+        g.drawImage(this.player, 460, this.rowPos[0] + 420, 45, 47, IO);
         g.drawImage(this.player, 700, this.rowPos[1], 45, 47, IO);
         g.drawImage(this.player, 700, this.rowPos[1] + 150, 45, 47, IO);
         g.drawImage(this.player, 700, this.rowPos[1] + 300, 45, 47, IO);

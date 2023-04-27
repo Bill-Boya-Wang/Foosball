@@ -9,7 +9,6 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 
-
 public class Game {
     JFrame frame;
     JPanel panel;
