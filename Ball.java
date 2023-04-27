@@ -23,11 +23,12 @@ public class Ball {
     }
 
     public void drawBall(Graphics g, ImageObserver IO) {
-//        if ((int)x > 600 && (int)x < 650) {
-//            if((int)y > ) {
-//
-//            }
-//        }
+        if ((int)x > 600 && (int)x < 650) {
+            if ((int)y > BlueTeam.rowPos[0] && (int)x < BlueTeam.rowPos[0] + 400) {
+                velocity = 7;
+                direction = 0;
+            }
+        }
 
         y = y - (velocity * Math.sin(direction));
         x = x + (velocity * Math.cos(direction));

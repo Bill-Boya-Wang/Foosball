@@ -10,7 +10,7 @@ import java.awt.image.ImageObserver;
 
 public class BlueTeam {
     Image player;
-    public int[] rowPos = new int[4];
+    public static int[] rowPos = new int[4];
 
     public BlueTeam(Toolkit t) {
         this.player = t.getImage("GoodBlue.png");

@@ -46,7 +46,7 @@ public class RedTeam {
         g.drawImage(player, 980, rowPos[3], 45, 47, IO);
     }
 
-    public void movePlayer(int col, int pos) {
+    private void movePlayer(int col, int pos) {
         rowPos[col] = rowPos[col] + pos;
 
     }
