@@ -27,7 +27,6 @@ public class Ball {
 
     public void drawBall(Graphics g, ImageObserver IO) {
         int hitBoxScale = - 30;
-        touch = 0;
         if ((int)x > 470 && (int)x < 500) {
             if ((int)y > BlueTeam.rowPos[0] + hitBoxScale && (int)y < BlueTeam.rowPos[0] - hitBoxScale) {
                 velocity = 7;
