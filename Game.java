@@ -50,7 +50,6 @@ public class Game {
             ball.drawBall(g, this);
             red.paintTeam(g, this);
             blue.paintTeam(g, this);
-            System.out.println("WHAT IS GOING ON");
             g.dispose();
             timer.start();
         }
