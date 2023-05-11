@@ -58,8 +58,4 @@ public class Game {
             repaint();
         }
     }
-
-    public static void main(String[] args) throws IOException {
-        new Game();
-    }
 }
