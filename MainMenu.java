@@ -25,18 +25,21 @@ public class MainMenu extends JPanel implements ActionListener {
     private JButton info;
     private JButton start;
     private JFrame frame;
-    private JPanel startPane;
-    private JPanel infoPane;
+
+    private JLabel title;
+    private Graphics g;
+    final static String LABEL_TEXT = "FOOSBALL!!";
     private Image pic;
     private final int width = 1200;
     private final int height = 650;
     private Game game;
+    private Font  f1 = new Font(Font.SANS_SERIF,  Font.BOLD, 20);
     public MainMenu() {
         frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        startPane = new JPanel();
-        startPane.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         frame.setSize(800,800);
+        title = new JLabel();
+        title = new JLabel(LABEL_TEXT);
         ImageIcon startButton = new ImageIcon("NewstartButton.png");
         ImageIcon background = new ImageIcon("newGREEN.png");
         JLabel label = new JLabel(background);
@@ -45,10 +48,9 @@ public class MainMenu extends JPanel implements ActionListener {
         start.setActionCommand("Start");
         start.addActionListener(this);
         label.add(start);
+        frame.add(title);
         frame.add(label);
         frame.setVisible(true);
-
-
 
     }
     public void actionPerformed(ActionEvent e) {
