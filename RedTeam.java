@@ -41,14 +41,20 @@ public class RedTeam {
         if (Ball.touch == 14) g.drawImage(playerKick, 573, rowPos[0] + 420, 72, 47, IO);
         else                    g.drawImage(player, 600, rowPos[0] + 420, 45, 47, IO);
 
-        g.drawImage(player, 320, rowPos[1], 45, 47, IO);
-        g.drawImage(player, 320, rowPos[1] + 150, 45, 47, IO);
-        g.drawImage(player, 320, rowPos[1] + 300, 45, 47, IO);
+        if (Ball.touch == 15) g.drawImage(playerKick, 573, rowPos[1], 72, 47, IO);
+        else                     g.drawImage(player, 600, rowPos[1], 45, 47, IO);
+        if (Ball.touch == 16) g.drawImage(playerKick, 573, rowPos[1] + 150, 72, 47, IO);
+        else                    g.drawImage(player, 600, rowPos[1] + 150, 45, 47, IO);
+        if (Ball.touch == 17) g.drawImage(playerKick, 573, rowPos[1] + 300, 72, 47, IO);
+        else                    g.drawImage(player, 600, rowPos[1] + 300, 45, 47, IO);
 
-        g.drawImage(player, 840, rowPos[2], 45, 47, IO);
-        g.drawImage(player, 840, rowPos[2] + 250, 45, 47, IO);
+        if (Ball.touch == 18) g.drawImage(playerKick, 573, rowPos[2], 72, 47, IO);
+        else                     g.drawImage(player, 600, rowPos[2], 45, 47, IO);
+        if (Ball.touch == 19) g.drawImage(playerKick, 573, rowPos[2] + 250, 72, 47, IO);
+        else                    g.drawImage(player, 600, rowPos[2] + 250, 45, 47, IO);
 
-        g.drawImage(player, 980, rowPos[3], 45, 47, IO);
+        if (Ball.touch == 20) g.drawImage(playerKick, 573, rowPos[3], 72, 47, IO);
+        else                    g.drawImage(player, 600, rowPos[3], 45, 47, IO);
     }
 
     private void movePlayer(int col, int pos) {

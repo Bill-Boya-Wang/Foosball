@@ -34,19 +34,53 @@ public class Ball {
                 touch = 1;
             } else if ((int)y > BlueTeam.rowPos[0] + 110 + hitBoxScale && (int)y < BlueTeam.rowPos[0] + 110 - hitBoxScale) {
                 velocity = 7;
-                direction = Math.atan((BlueTeam.rowPos[0] - y)/(x - 440));
+                direction = Math.atan((BlueTeam.rowPos[0] + 110 - y)/(x - 440));
                 touch = 2;
             } else if ((int)y > BlueTeam.rowPos[0] + 280 + hitBoxScale && (int)y < BlueTeam.rowPos[0] + 280 - hitBoxScale) {
                 velocity = 7;
-                direction = Math.atan((BlueTeam.rowPos[0] - y)/(x - 440));
+                direction = Math.atan((BlueTeam.rowPos[0] + 280 - y)/(x - 440));
                 touch = 3;
             } else if ((int)y > BlueTeam.rowPos[0] + 420 + hitBoxScale && (int)y < BlueTeam.rowPos[0] + 420 - hitBoxScale) {
                 velocity = 7;
-                direction = Math.atan((BlueTeam.rowPos[0] - y)/(x - 440));
+                direction = Math.atan((BlueTeam.rowPos[0] + 420 - y)/(x - 440));
                 touch = 4;
             }
+        }
 
+        else if ((int)x > 710 && (int)x < 740) {
+            if ((int)y > BlueTeam.rowPos[1] + hitBoxScale && (int)y < BlueTeam.rowPos[1] - hitBoxScale) {
+                velocity = 7;
+                direction = Math.atan((BlueTeam.rowPos[1] - y)/(x - 680));
+                touch = 5;
+            } else if ((int)y > BlueTeam.rowPos[1] + 110 + hitBoxScale && (int)y < BlueTeam.rowPos[1] + 110 - hitBoxScale) {
+                velocity = 7;
+                direction = Math.atan((BlueTeam.rowPos[1] + 110 - y)/(x - 680));
+                touch = 6;
+            } else if ((int)y > BlueTeam.rowPos[1] + 280 + hitBoxScale && (int)y < BlueTeam.rowPos[1] + 280 - hitBoxScale) {
+                velocity = 7;
+                direction = Math.atan((BlueTeam.rowPos[1] + 280 - y)/(x - 680));
+                touch = 7;
+            }
+        }
 
+        else if ((int)x > 190 && (int)x < 220) {
+            if ((int)y > BlueTeam.rowPos[2] + hitBoxScale && (int)y < BlueTeam.rowPos[2] - hitBoxScale) {
+                velocity = 7;
+                direction = Math.atan((BlueTeam.rowPos[2] - y)/(x - 680));
+                touch = 8;
+            } else if ((int)y > BlueTeam.rowPos[2] + 250 + hitBoxScale && (int)y < BlueTeam.rowPos[2] + 250 - hitBoxScale) {
+                velocity = 7;
+                direction = Math.atan((BlueTeam.rowPos[2] + 250 - y)/(x - 680));
+                touch = 9;
+            }
+        }
+
+        else if ((int)x > 80 && (int)x < 110) {
+            if ((int)y > BlueTeam.rowPos[3] + hitBoxScale && (int)y < BlueTeam.rowPos[3] - hitBoxScale) {
+                velocity = 7;
+                direction = Math.atan((BlueTeam.rowPos[2] - y) / (x - 680));
+                touch = 10;
+            }
         }
 
         else if((int)x > 580 && (int)x < 610) {
@@ -56,15 +90,35 @@ public class Ball {
                 touch = 11;
             } else if ((int)y > RedTeam.rowPos[0] + 110 + hitBoxScale && (int)y < RedTeam.rowPos[0] + 110 - hitBoxScale) {
                 velocity = 7;
-                direction = Math.PI-Math.atan((RedTeam.rowPos[0] - y)/(x - 640));
+                direction = Math.PI-Math.atan((RedTeam.rowPos[0] + 110 - y)/(x - 640));
                 touch = 12;
             } else if ((int)y > RedTeam.rowPos[0] + 280 + hitBoxScale && (int)y < RedTeam.rowPos[0] + 280 - hitBoxScale) {
                 velocity = 7;
-                direction = Math.PI-Math.atan((RedTeam.rowPos[0] - y)/(x - 640));
+                direction = Math.PI-Math.atan((RedTeam.rowPos[0] + 280 - y)/(x - 640));
                 touch = 13;
             } else if ((int)y > RedTeam.rowPos[0] + 420 + hitBoxScale && (int)y < RedTeam.rowPos[0] + 420 - hitBoxScale) {
                 velocity = 7;
+                direction = Math.PI-Math.atan((RedTeam.rowPos[0] + 420 - y)/(x - 640));
+                touch = 14;
+            }
+        }
+
+        else if((int)x > 580 && (int)x < 610) {
+            if ((int)y > RedTeam.rowPos[0] + hitBoxScale && (int)y < RedTeam.rowPos[0] - hitBoxScale) {
+                velocity = 7;
                 direction = Math.PI-Math.atan((RedTeam.rowPos[0] - y)/(x - 640));
+                touch = 11;
+            } else if ((int)y > RedTeam.rowPos[0] + 110 + hitBoxScale && (int)y < RedTeam.rowPos[0] + 110 - hitBoxScale) {
+                velocity = 7;
+                direction = Math.PI-Math.atan((RedTeam.rowPos[0] + 110 - y)/(x - 640));
+                touch = 12;
+            } else if ((int)y > RedTeam.rowPos[0] + 280 + hitBoxScale && (int)y < RedTeam.rowPos[0] + 280 - hitBoxScale) {
+                velocity = 7;
+                direction = Math.PI-Math.atan((RedTeam.rowPos[0] + 280 - y)/(x - 640));
+                touch = 13;
+            } else if ((int)y > RedTeam.rowPos[0] + 420 + hitBoxScale && (int)y < RedTeam.rowPos[0] + 420 - hitBoxScale) {
+                velocity = 7;
+                direction = Math.PI-Math.atan((RedTeam.rowPos[0] + 420 - y)/(x - 640));
                 touch = 14;
             }
         }
