@@ -15,7 +15,6 @@ public class MainMenu extends JPanel implements ActionListener {
 
     private JLabel title;
     private Graphics g;
-    final static String LABEL_TEXT = "FOOSBALL!!";
     private Image pic;
     private final int width = 1200;
     private final int height = 650;
