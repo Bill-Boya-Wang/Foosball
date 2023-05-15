@@ -11,12 +11,15 @@ import java.io.IOException;
 
 public class Game {
     JFrame frame;
+    Font  f1 = new Font(Font.SANS_SERIF,  Font.BOLD, 23);
     JPanel panel;
     Ball ball;
     RedTeam red;
     BlueTeam blue;
     ComputerPlayer computer;
     Toolkit t=Toolkit.getDefaultToolkit();
+    private int CPUScore = 0;
+    private int playerScore = 0;
 
 //    JButton changeView, levelUp, levelDown;
 
@@ -48,10 +51,14 @@ public class Game {
         }
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
+            g.setFont(f1);
             g.drawImage(backgroundImage,0,0,1100,650,0,0,101,60,this);
             ball.drawBall(g, this);
             red.paintTeam(g, this, computer);
             blue.paintTeam(g, this);
+            g.setColor(Color.BLACK);
+            g.drawString("Player Score: " + ball.getPlayerScore(), 5,17);
+            g.drawString("Computer Score: " + ball.getCPUScore(), 200,17);
             g.dispose();
             timer.start();
         }
