@@ -9,6 +9,8 @@ public class Ball {
     private double y;
     private double direction;
     Image ball;
+    private int CPUScore = 0;
+    private int playerScore = 0;
 
     public Ball(Toolkit t)  {
         touch = 0;
@@ -140,9 +142,8 @@ public class Ball {
         }
 
         detectWall();
+        detectGoal();
 
-
-        System.out.println(x + " : " + y);
         y = y - (velocity * Math.sin(direction));
         x = x + (velocity * Math.cos(direction));
         if (velocity > 0)
@@ -168,6 +169,30 @@ public class Ball {
             velocity = velocity * 1.1;
         }
     }
+    private void detectGoal() {
+        if ((int) x >= 1000 &&( (int)y<350 && (int)y>230)) {
+            System.out.println("PLAYER GOAL!!!!!");
+            playerScore++;
+            reset();
+        } else if ((int) x <= 30 &&( (int)y<350 && (int)y>230)) {
+            System.out.println("COMPUTER GOAL!!!!");
+            CPUScore++;
+            reset();
+        }
+    }
+    public void reset() {
+        x = 527;
+        y = 570;
+        direction = (Math.random() * (Math.PI / 2) + Math.PI / 4);;
+    }
 
 
+
+    public int getPlayerScore() {
+        return playerScore;
+    }
+
+    public int getCPUScore() {
+        return CPUScore;
+    }
 }
