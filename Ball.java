@@ -171,11 +171,9 @@ public class Ball {
     }
     private void detectGoal() {
         if ((int) x >= 1000 &&( (int)y<350 && (int)y>230)) {
-            System.out.println("PLAYER GOAL!!!!!");
             playerScore++;
             reset();
         } else if ((int) x <= 30 &&( (int)y<350 && (int)y>230)) {
-            System.out.println("COMPUTER GOAL!!!!");
             CPUScore++;
             reset();
         }
