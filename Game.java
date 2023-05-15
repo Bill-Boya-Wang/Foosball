@@ -55,8 +55,8 @@ public class Game {
             red.paintTeam(g, this);
             blue.paintTeam(g, this);
             g.setColor(Color.BLACK);
-            g.drawString("Player Score:" + ball.getPlayerScore(), 5,17);
-            g.drawString("Computer Score:" + ball.getCPUScore(), 200,17);
+            g.drawString("Player Score: " + ball.getPlayerScore(), 5,17);
+            g.drawString("Computer Score: " + ball.getCPUScore(), 200,17);
             g.dispose();
             timer.start();
         }
