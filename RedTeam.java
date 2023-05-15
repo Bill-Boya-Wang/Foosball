@@ -15,23 +15,35 @@ public class RedTeam {
         rowPos[3] = 290;
 
     }
-    public void paintTeam(Graphics g, ImageObserver IO) {
-        if (Clicker.i && rowPos[0] > 31) {
+    public void paintTeam(Graphics g, ImageObserver IO, ComputerPlayer computer) {
+        boolean iState;
+        boolean kState;
+        if (computer.active()){
+            iState = computer.i;
+            kState = computer.k;
+        } else {
+            iState = Clicker.i;
+            kState = Clicker.k;
+        }
+
+        if (iState && rowPos[0] > 31) {
             movePlayer(0, -6);
             movePlayer(1, -13);
             movePlayer(2, -16);
         }
-        if (Clicker.i && rowPos[3] > 237) {
+        if (iState && rowPos[3] > 237) {
             movePlayer(3, -13);
         }
-        if (Clicker.k && rowPos[3] < 356) {
+        if (kState && rowPos[3] < 356) {
             movePlayer(3, 13);
         }
-        if (Clicker.k && rowPos[0] < 134) {
+        if (kState && rowPos[0] < 134) {
             movePlayer(0, 6);
             movePlayer(1, 13);
             movePlayer(2, 16);
         }
+
+
         if (Ball.touch == 11) g.drawImage(playerKick, 573, rowPos[0], 72, 47, IO);
         else                     g.drawImage(player, 600, rowPos[0], 45, 47, IO);
         if (Ball.touch == 12) g.drawImage(playerKick, 573, rowPos[0] + 140, 72, 47, IO);

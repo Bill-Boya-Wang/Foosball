@@ -15,6 +15,7 @@ public class Game {
     Ball ball;
     RedTeam red;
     BlueTeam blue;
+    ComputerPlayer computer;
     Toolkit t=Toolkit.getDefaultToolkit();
 
 //    JButton changeView, levelUp, levelDown;
@@ -28,6 +29,7 @@ public class Game {
         frame.setContentPane(panel);
         panel.setLayout(null);
         ball = new Ball(t);
+        computer = new ComputerPlayer(ball);
         red = new RedTeam(t);
         blue = new BlueTeam(t);
         frame.addKeyListener(new Clicker());
@@ -48,7 +50,7 @@ public class Game {
             super.paintComponent(g);
             g.drawImage(backgroundImage,0,0,1100,650,0,0,101,60,this);
             ball.drawBall(g, this);
-            red.paintTeam(g, this);
+            red.paintTeam(g, this, computer);
             blue.paintTeam(g, this);
             g.dispose();
             timer.start();

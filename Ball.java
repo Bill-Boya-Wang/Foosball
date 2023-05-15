@@ -21,9 +21,8 @@ public class Ball {
     public Image getBallImage () {
         return ball;
     }
-    public void ballYShift(){
-
-    }
+    public double getBallx() { return x; }
+    public double getBally() { return y; }
 
     public void drawBall(Graphics g, ImageObserver IO) {
         int hitBoxScale = - 30;
@@ -142,7 +141,6 @@ public class Ball {
         detectWall();
 
 
-        System.out.println(x + " : " + y);
         y = y - (velocity * Math.sin(direction));
         x = x + (velocity * Math.cos(direction));
         if (velocity > 0)

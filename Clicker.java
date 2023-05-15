@@ -59,8 +59,4 @@ public class Clicker implements MouseListener, KeyListener {
         }
     }
 
-    public boolean wPressed() {
-        return w;
-    }
-
 }
